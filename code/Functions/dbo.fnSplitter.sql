@@ -15,7 +15,7 @@ CREATE FUNCTION [dbo].[fnSplitter] (@IDs nvarchar(Max))
     Insert @Tbl_IDs   
     Select  Cast(Substring(@IDs,@Pos2,@Pos1-@Pos2) As bigint)  
     Set @Pos2=@Pos1+1  -- Go to next non comma character  
-    Set @Pos1 = @Pos1+1  -- search from the next charcater  
+    Set @Pos1 = @Pos1+1  -- Search from the next charcater  
    End 
    DELETE FROM @Tbl_IDs WHERE ID=0  
  Return  
