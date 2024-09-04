@@ -15,7 +15,7 @@ CREATE FUNCTION [dbo].[fnKeywordsSplitter] (@keywords Varchar(4000))
     Insert @Tbl_Keywords   
     Select  Cast(LTRIM(RTRIM(Substring(@keywords,@Pos2,@Pos1-@Pos2))) As nvarchar(4000))  
     Set @Pos2=@Pos1+1  -- Go to next non comma character  
-    Set @Pos1 = @Pos1+1  -- Search from the next charcater  
+    Set @Pos1 = @Pos1+1  -- Search from the next charcate  
    End   
  Return  
 End
