@@ -7,7 +7,7 @@ CREATE FUNCTION [dbo].[fnSplitter] (@IDs nvarchar(Max))
   Set @IDs =  @IDs + ',' -- Append comma  
   Declare @Pos1 Int  -- Indexes to keep the position of searching  
   Declare @pos2 Int  
-  Set @Pos1=1    -- Start from first character   
+  Set @Pos1=1    -- start from first character   
   Set @Pos2=1  
   While @Pos1<Len(@IDs)  
    Begin  
